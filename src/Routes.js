@@ -3,6 +3,10 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./core/Home";
 import Signin from "./user/Signin";
 import Signup from "./user/Signup";
+import PrivateRoutes from "./auth/helper/PrivateRoutes";
+import AdminRoutes from "./auth/helper/AdminRoutes";
+import UserDashBoard from "./user/UserDashBoard";
+import adminDashBoard from "./user/AdminDashBoard";
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -10,6 +14,8 @@ const Routes = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/signin" component={Signin} />
+        <PrivateRoutes path="/user/dashboard" exact component={UserDashBoard} />
+        <AdminRoutes path="/admin/dashboard" exact component={adminDashBoard} />
       </Switch>
     </BrowserRouter>
   );
