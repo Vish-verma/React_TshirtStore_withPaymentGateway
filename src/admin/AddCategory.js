@@ -78,7 +78,7 @@ const AddCategory = () => {
       className="container bg-info p-4"
     >
       <div className="row bg-white rounded">
-        <div class="col-md-8 offset-md-2">
+        <div className="col-md-8 offset-md-2">
           {successMessage()}
           {warningMessage()}
           {myCategoryForm()}
