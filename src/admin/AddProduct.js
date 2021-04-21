@@ -84,14 +84,11 @@ const AppProduct = () => {
       <h4>{createdProduct} created successfully</h4>
     </div>
   );
-  const errorMessage = () => (
-    <div
-      className="alert alert-danger mt-3"
-      style={{ display: createdProduct ? "none" : "" }}
-    >
-      <h4>{createdProduct} Creation Failed</h4>
-    </div>
-  );
+  const errorMessage = () => {
+    if (error) {
+      return <h4 className="text-success">Failed to Create Category</h4>;
+    }
+  };
   const createProductForm = () => (
     <form>
       <span>Post photo</span>
