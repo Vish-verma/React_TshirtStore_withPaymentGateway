@@ -57,7 +57,7 @@ const Signin = () => {
           });
         }
       })
-      .catch(console.log("Sigin request failed"));
+      .catch((err) => console.log("Sigin request failed", err));
   };
 
   const performRedirect = () => {
